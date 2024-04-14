@@ -21,6 +21,7 @@ function Input({ label }) {
 const styles = {
   input: {
     backgroundColor: globalStyles.backgroundGrey,
+    fontFamily: 'Asap-Bold',
     height: 40,
     width: 240,
     paddingHorizontal: 10,
