@@ -3,7 +3,6 @@ import type { PropsWithChildren } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./app/screens/Home.tsx";
-import { globalStyles } from "./app/styles/globalStyles.tsx";
 import {
   StyleSheet,
   Text,
@@ -11,13 +10,6 @@ import {
   View
 } from "react-native";
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions
-} from "react-native/Libraries/NewAppScreen";
 import Login from "./app/screens/Login.tsx";
 
 
@@ -25,36 +17,35 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({ children, title }: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === "dark";
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black
-          }
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark
-          }
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+// function Section({ children, title }: SectionProps): React.JSX.Element {
+//   const isDarkMode = useColorScheme() === "dark";
+//   return (
+//     <View style={styles.sectionContainer}>
+//       <Text
+//         style={[
+//           styles.sectionTitle,
+//           {
+//             color: isDarkMode ? Colors.white : Colors.black
+//           }
+//         ]}>
+//         {title}
+//       </Text>
+//       <Text
+//         style={[
+//           styles.sectionDescription,
+//           {
+//             color: isDarkMode ? Colors.light : Colors.dark
+//           }
+//         ]}>
+//         {children}
+//       </Text>
+//     </View>
+//   );
+// }
 
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
-  // todo remove headers from screens
   return (
     <NavigationContainer>
       <Stack.Navigator

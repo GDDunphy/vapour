@@ -1,13 +1,10 @@
 import { TextInput } from 'react-native';
-import { useState } from 'react';
 import { globalStyles } from "../styles/globalStyles.tsx";
 
 // todo
 //  label
 
-function Input({ label }) {
-  const [value, setValue] = useState('');
-
+function Input({ label, value, setValue }) {
   return (
     <TextInput
       style={styles.input}
