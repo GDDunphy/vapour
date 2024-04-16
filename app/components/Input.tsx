@@ -1,16 +1,16 @@
-import { TextInput } from 'react-native';
+import { TextInput } from "react-native";
 import { globalStyles } from "../styles/globalStyles.tsx";
 
 // todo
 //  label
 
-function Input({ label, value, setValue }) {
+function Input({ label, value, onChange }) {
   return (
     <TextInput
       style={styles.input}
       placeholder={label}
       value={value}
-      onChangeText={setValue}
+      onChangeText={onChange}
     />
   );
 }
@@ -18,7 +18,7 @@ function Input({ label, value, setValue }) {
 const styles = {
   input: {
     backgroundColor: globalStyles.backgroundGrey,
-    fontFamily: 'Asap-Bold',
+    fontFamily: "Asap-Bold",
     height: 40,
     width: 240,
     paddingHorizontal: 10,
